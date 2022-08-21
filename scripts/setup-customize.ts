@@ -75,7 +75,7 @@ export async function setupCustomize() {
 
           resultLineList[0] = resultLineList[0].replace(/^\s*\/\/\s*/, '');
 
-          await Deno.writeTextFile(configUrl, resultLineList.join('\n'));
+          await Deno.writeTextFile(configUrl, resultLineList.join('\n') + '\n');
         }
       } finally {
         file.close();
