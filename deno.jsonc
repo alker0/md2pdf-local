@@ -1,0 +1,20 @@
+{
+  "tasks": {
+    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "config": "deno run -A scripts/setup-customize.ts",
+    "npm:add": "deno run -A https://esm.sh/v91 add",
+    "npm:update": "deno run -A https://esm.sh/v91 update",
+    "npm:remove": "deno run -A https://esm.sh/v91 remove"
+  },
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns",
+      "deno.unstable"
+    ]
+  },
+  "importMap": "./import_map.json",
+  "fmt": { "options": { "singleQuote": true } }
+}

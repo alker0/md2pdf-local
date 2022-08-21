@@ -1,0 +1,136 @@
+:root {
+  --bright-orange: #ff9900;
+  --easy-yellow: #cfcf00;
+  --link-color: #388e3c;
+  --head-base-font: 7rem;
+  --head-font-smallness: 0px;
+  --content-base-font: 3rem;
+}
+
+.markdown {
+  background-color: black;
+  padding: 1.15rem;
+  padding-top: 0;
+  /* max-height: 26214px; */
+}
+
+.markdown *,
+.markdown a:visited {
+  color: var(--easy-yellow);
+}
+.markdown *:nth-child(1) {
+  margin-top: 0;
+}
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  white-space: pre;
+  color: var(--bright-orange);
+  border-color: var(--bright-orange);
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+  font-size: calc(var(--head-base-font) - var(--head-font-smallness));
+  line-height: 2;
+}
+.markdown h1 {
+  border-bottom-width: 1rem;
+  border-bottom-style: double;
+}
+.markdown h1:before {
+  content: ' ';
+}
+.markdown h2 {
+  --head-font-smallness: 1rem;
+  border-bottom-width: 0.5rem;
+  border-bottom-style: dashed;
+}
+.markdown h3 {
+  --head-font-smallness: 3rem;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: dotted;
+}
+.markdown h4 {
+  --head-font-smallness: 3.2rem;
+}
+
+.markdown h4:before {
+  content: '【';
+  margin-left: -2.5rem;
+}
+.markdown h4:after {
+  content: '】';
+  white-space: pre;
+}
+.markdown h5 {
+  --head-font-smallness: 3.8rem;
+}
+.markdown h5:before {
+  content: '[ ';
+}
+.markdown h5:after {
+  content: ' ]';
+}
+.markdown h6 {
+  --head-font-smallness: 4rem;
+}
+.markdown div {
+  margin: 0px;
+}
+.markdown p {
+  margin: 0px;
+}
+.markdown p + p {
+  margin-top: 1rem;
+  margin-bottom: 0px;
+}
+.markdown blockquote {
+  font-size: var(--content-base-font) + 2px;
+  margin-left: 2px;
+  padding-left: 7px;
+  border-left: 5px solid var(--easy-orange);
+}
+.markdown p,
+.markdown pre,
+.markdown ul li,
+.markdown ul li p,
+.markdown ol li,
+.markdown pre code code p {
+  font-size: var(--content-base-font);
+  white-space: pre-wrap;
+}
+.markdown ul,
+.markdown ol {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style-position: outside;
+}
+.markdown ul {
+  padding-left: 3rem;
+  /* list-style-type: disc; */
+  /* list-style-type: '・'; */
+  list-style-type: '• ';
+}
+.markdown ol {
+  padding-left: 3rem;
+  list-style-type: decimal;
+}
+.markdown ol > li {
+  padding-bottom: 0.5rem;
+}
+
+.markdown pre {
+  max-width: 200%;
+  overflow: visible;
+}
+
+.markdown li > ul {
+  margin-top: -20px;
+  margin-bottom: -40px;
+}
+.markdown li li + li {
+  margin-top: -20px;
+}
+

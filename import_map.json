@@ -1,0 +1,24 @@
+{
+  "imports": {
+    "$fresh/": "https://raw.githubusercontent.com/lucacasonato/fresh/main/",
+    "preact": "https://esm.sh/preact@10.10.0",
+    "preact/": "https://esm.sh/preact@10.10.0/",
+    "preact-render-to-string": "https://esm.sh/preact-render-to-string@5.2.1?external=preact",
+    "twind": "https://esm.sh/twind@^0.16.17",
+    "twind/": "https://esm.sh/twind@^0.16.17/",
+    "@twind/typography": "https://esm.sh/v91/*@twind/typography@0.0.2",
+    "download": "https://deno.land/x/download@v1.0.1/mod.ts",
+    "path": "https://deno.land/std@0.152.0/path/mod.ts",
+    "io": "https://deno.land/std@0.152.0/io/mod.ts",
+    "debounce": "https://esm.sh/just-debounce-it@^3.1.1",
+    "marked": "https://esm.sh/marked@^4.0.18",
+    "marked/": "https://esm.sh/marked@^4.0.18/",
+    "twemoji": "https://esm.sh/twemoji@^14.0.2",
+    "html2canvas": "https://esm.sh/html2canvas@^1.4.1",
+    "html2canvas/": "https://esm.sh/html2canvas@^1.4.1/",
+    "jspdf": "https://esm.sh/jspdf@^2.5.1?external=html2canvas",
+    "extract-class": "https://cdn.skypack.dev/string-extract-class-names@^7.1.1?dts",
+    "$root/": "./",
+    "$config": "./md2pdf.config.ts"
+  }
+}

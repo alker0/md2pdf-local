@@ -1,0 +1,13 @@
+.vscode/*.code-workspace
+
+fresh.gen.ts
+
+/static/favicon.ico
+/static/md/
+/static/fonts/
+
+/md2pdf.config.ts
+
+tmp/
+*.bak
+*.bak.*
