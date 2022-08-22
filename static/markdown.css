@@ -48,12 +48,12 @@
   border-bottom-style: dashed;
 }
 .markdown h3 {
-  --head-font-smallness: 3rem;
+  --head-font-smallness: 3.1rem;
   border-bottom-width: 0.1rem;
   border-bottom-style: dotted;
 }
 .markdown h4 {
-  --head-font-smallness: 3.2rem;
+  --head-font-smallness: 3.3rem;
 }
 
 .markdown h4:before {
