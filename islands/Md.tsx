@@ -198,10 +198,54 @@ export default function Md(
     };
   }
 
+  const scrollMap: Record<
+    string,
+    { scrollFnName: 'scrollBy' | 'scrollTo'; getTop: () => number }
+  > = {
+    PageUp: {
+      scrollFnName: 'scrollBy',
+      getTop: () => window.innerHeight * -1,
+    },
+    PageDown: {
+      scrollFnName: 'scrollBy',
+      getTop: () => window.innerHeight,
+    },
+    Home: {
+      scrollFnName: 'scrollTo',
+      getTop: () => 0,
+    },
+    End: {
+      scrollFnName: 'scrollTo',
+      getTop: () => document.body.scrollHeight,
+    },
+  };
+
   function inputKeydownHandler(ev: KeyboardEvent) {
-    if (ev.key === 'Enter' && ev.shiftKey) {
-      saveMdAsImageWithCheck(ev, mdElm, fileNameBody);
+    if (ev.key === 'Enter') {
+      if (ev.shiftKey) {
+        saveMdAsImageWithCheck(ev, mdElm, fileNameBody);
+      }
+
+      return;
     }
+
+    if (ev.shiftKey || ev.ctrlKey || ev.altKey || ev.metaKey) {
+      return;
+    }
+
+    if (ev.target === inputMdElm.current) {
+      return;
+    }
+
+    const scrollFnInfo = scrollMap[ev.key];
+    if (scrollFnInfo == null) {
+      return;
+    }
+
+    window[scrollFnInfo.scrollFnName]({
+      top: scrollFnInfo.getTop(),
+      behavior: 'smooth',
+    });
   }
 
   const mdSrcMemo = useMemo(() => {
