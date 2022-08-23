@@ -11,7 +11,7 @@ function getCssFontResourceList() {
       const { fontFamily, src: srcList } = cssFontInfo as CssFontFaceInfo;
       return srcList.filter((src) =>
         typeof src.downloadUrl === 'string' &&
-        src.downloadUrl.startsWith('/fonts/')
+        src.url.startsWith('/fonts/')
       ).map(
         (src) => {
           const { url: installPathRaw, downloadUrl } = src as Required<
