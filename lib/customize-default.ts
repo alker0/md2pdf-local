@@ -7,6 +7,7 @@ const config = {
     default: 'markdown',
     prefix: 'MD - ',
   },
+  pageWidth: '1080px',
   topArraySelector: ':scope > h1, :scope > h2, :scope > h3',
   md2pdfIgnoreSelector: 'iframe, video, input, textarea',
   pdfQuality: 0.85,
