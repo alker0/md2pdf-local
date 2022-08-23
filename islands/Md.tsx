@@ -35,6 +35,9 @@ function getFontFamiliesText(): string | undefined {
 
 const markdownAdditionalStyle = css({
   fontFamily: getFontFamiliesText(),
+  '&': {
+    width: config.pageWidth,
+  },
   ...markdownCloneHideRules,
 });
 
@@ -342,7 +345,10 @@ export default function Md(
 
   return (
     <div id='md-container' class={tw`${globalStyle} w-[81%] m-auto relative`}>
-      <div id='md-left-side-container' class='fixed h-full -ml-[7.25rem]'>
+      <div
+        id='md-left-side-container'
+        class='fixed h-full left-[calc(5vw-3rem)]'
+      >
         <div class='h-full w-[6rem] py-8 flex(& col)'>
           <label
             for={shouldFixId}
