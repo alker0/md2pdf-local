@@ -39,7 +39,7 @@ export const markdownCloneHideRules: CSSRules = {
     [`& > *:not([${showSinceMe}], [${showSinceMe}] ~ *)`]: {
       display: 'none',
     },
-    [`& > [${hideSinceMe}], & > [${hideSinceMe}] ~ *`]: {
+    [`& > *:is([${hideSinceMe}], [${hideSinceMe}] ~ *)`]: {
       display: 'none',
     },
   },
