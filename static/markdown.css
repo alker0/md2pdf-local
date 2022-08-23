@@ -14,19 +14,13 @@
   /* max-height: 26214px; */
 }
 
-.markdown *,
-.markdown a:visited {
+.markdown :is(*, a:visited) {
   color: var(--easy-yellow);
 }
 .markdown *:nth-child(1) {
   margin-top: 0;
 }
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
+.markdown :is(h1, h2, h3, h4, h5, h6) {
   white-space: pre;
   color: var(--bright-orange);
   border-color: var(--bright-orange);
@@ -92,17 +86,11 @@
   padding-left: 7px;
   border-left: 5px solid var(--easy-orange);
 }
-.markdown p,
-.markdown pre,
-.markdown ul li,
-.markdown ul li p,
-.markdown ol li,
-.markdown pre code code p {
+.markdown :is(p, pre, ul li, ul li p, ol li, pre, code) {
   font-size: var(--content-base-font);
   white-space: pre-wrap;
 }
-.markdown ul,
-.markdown ol {
+.markdown :is(ul, ol) {
   margin-top: 0px;
   margin-bottom: 0px;
   list-style-position: outside;
