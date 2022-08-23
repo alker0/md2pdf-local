@@ -238,7 +238,7 @@ async function saveMdAsPdfImage(
 
         const pageSize = pdf.internal.pageSize;
 
-        console.log('Size: %o', {
+        console.log('Page No:%o\nSize:%o', pageIndex + 1, {
           page: {
             width: pageSize.getWidth(),
             height: pageSize.getHeight(),
