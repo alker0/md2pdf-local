@@ -8,6 +8,10 @@ export const showSinceMe = 'data-show-since-me';
 export const hideSinceMe = 'data-hide-since-me';
 
 function getOrderListStyleBefore(listStyleTypeArg?: string) {
+  if (listStyleTypeArg === 'none') {
+    return;
+  }
+
   const marginLeft = '-2.5rem';
 
   const result = {} as CSSRules;
