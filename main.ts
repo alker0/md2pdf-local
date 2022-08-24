@@ -9,4 +9,6 @@ import manifest from './fresh.gen.ts';
 import twindPlugin from '$fresh/plugins/twind.ts';
 import twindConfig from './twind.config.js';
 
-await start(manifest, { plugins: [twindPlugin(twindConfig)], port: 8080 });
+import md2pdfConfig from '$config';
+
+await start(manifest, { plugins: [twindPlugin(twindConfig)], port: md2pdfConfig.port });
