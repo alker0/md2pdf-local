@@ -1,3 +1,4 @@
+import { asset } from '$fresh/runtime.ts';
 import { CSSRules } from 'twind';
 import config from '$config';
 import { CssFontFaceInfoForTwind, CssFontImportInfo } from './font-utils.ts';
@@ -35,7 +36,7 @@ export function getGlobalStyle(): GlobalStyle {
           unicodeRange,
           src: src.map(
             ({ url, fontFormat = 'truetype' }) =>
-              `url(${url}) format('${fontFormat}')`,
+              `url(${asset(url)}) format('${fontFormat}')`,
           )
             .join(','),
         };

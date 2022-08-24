@@ -77,7 +77,7 @@ export type PdfFont = {
 
 export const pdfFontList: PdfFont[] = [];
 
-export type CssFontFeceSrcItem = {
+export type CssFontFaceSrcItem = {
   url: string;
   fontFormat?: FontFormat;
   downloadUrl?: string;
@@ -86,7 +86,7 @@ export type CssFontFeceSrcItem = {
 export type CssFontFaceInfo = {
   needFontFace: true;
   fontFamily: FontDefinition['font-family'];
-  src: CssFontFeceSrcItem[];
+  src: CssFontFaceSrcItem[];
   fontStyle?: FontDefinition['font-style'];
   fontWeight?: FontDefinition['font-weight'];
   fontStretch?: FontDefinition['font-stretch'];
