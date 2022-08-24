@@ -35,6 +35,9 @@ function getFontFamiliesText(): string | undefined {
 
 const markdownAdditionalStyle = css({
   fontFamily: getFontFamiliesText(),
+  '&': {
+    width: config.pageWidth,
+  },
   ...markdownCloneHideRules,
 });
 
@@ -341,10 +344,7 @@ export default function Md(
   const saveButtonClass = tw`block py-0.5 px-2 ${leftSideItemClass}`;
 
   return (
-    <div
-      id='md-container'
-      class={tw`${globalStyle} w-[${config.pageWidth}] m-auto relative`}
-    >
+    <div id='md-container' class={tw`${globalStyle} w-[81%] m-auto relative`}>
       <div
         id='md-left-side-container'
         class='fixed h-full left-[calc(5vw-3rem)]'
