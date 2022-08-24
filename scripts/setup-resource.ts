@@ -1,6 +1,6 @@
 import { download } from 'download';
 import * as path from 'path';
-import { CssFontFaceInfo, CssFontFeceSrcItem } from '$root/lib/font-utils.ts';
+import { CssFontFaceInfo, CssFontFaceSrcItem } from '$root/lib/font-utils.ts';
 import config from '$config';
 
 const { cssFontList } = config;
@@ -15,7 +15,7 @@ function getCssFontResourceList() {
       ).map(
         (src) => {
           const { url: installPathRaw, downloadUrl } = src as Required<
-            CssFontFeceSrcItem
+            CssFontFaceSrcItem
           >;
 
           return {
