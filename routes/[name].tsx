@@ -31,6 +31,7 @@ export const handler: Handlers<PageData> = {
 
     try {
       const mdContent = Deno.readTextFileSync(mdFileUrl);
+
       return ctx.render({ mdFileBaseName, mdContent, mdClassName });
     } catch (error: unknown) {
       if ((error as Error).name !== 'NotFound') {

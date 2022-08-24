@@ -45,6 +45,10 @@ export async function setupResource() {
 
   const downloadingFontList = cssFontResourceList.map(
     async ({ fontFamily, installPathUrl, downloadUrl }) => {
+      if (downloadUrl == null) {
+        return;
+      }
+
       try {
         await Deno.stat(installPathUrl);
       } catch (error) {
@@ -55,7 +59,19 @@ export async function setupResource() {
             `Download '${fontFamily}' to '${installPath}' from '${downloadUrl}'`,
           );
 
-          await download(downloadUrl!, {
+          const dlDir = path.dirname(installPath);
+
+          try {
+            await Deno.stat(dlDir);
+          } catch (error) {
+            if (error instanceof Deno.errors.NotFound) {
+              await Deno.mkdir(dlDir);
+            } else {
+              throw error;
+            }
+          }
+
+          await download(downloadUrl, {
             file: path.basename(installPath),
             dir: path.dirname(installPath),
           });
