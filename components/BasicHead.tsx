@@ -16,7 +16,6 @@ export default function BasicHead(props: {
 
   return (
     <Head>
-      <meta charSet='UTF-8' />
       <title>{title}</title>
       <meta name='robots' content='noindex,nofollow' />
       <link rel='stylesheet' href='/markdown.css' />

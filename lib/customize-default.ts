@@ -3,6 +3,7 @@ import { emojiCodeRange } from '$root/lib/font-utils.ts';
 
 // _ Replace with /\s*=/: Md2PdfConfig =/
 const config = {
+  port: 8000,
   pageTitle: {
     default: 'markdown',
     prefix: 'MD - ',
